@@ -28,6 +28,9 @@ with open('config.json', 'r') as config_file:
 
         if 'values' in schedule.keys():
             for row in schedule['values']:
+                if len(row) < 4:
+                    continue
+
                 if row[1] == today_str and row[3] == '有り':
 
                     payload = {
