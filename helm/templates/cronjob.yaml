@@ -1,0 +1,31 @@
+---
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: xiv-raid-reminder
+spec:
+  schedule: "30 3 * * *"
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: xiv-raid-reminder
+            image: gcr.io/neigepluie/xiv-raid-reminder:{{ .Values.jobContainerTag | default "latest" }}
+            resources:
+              requests:
+                memory: "256Mi"
+                cpu: "500m"
+              limits:
+                memory: "256Mi"
+                cpu: "500m"
+            volumeMounts:
+            - name: config
+              mountPath: /config.json
+              readOnly: true
+          volumes:
+          - name: config
+            secret:
+              secretName: xiv-raid-reminder-config
+          restartPolicy: OnFailure

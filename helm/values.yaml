@@ -1,0 +1,8 @@
+# reminder container tag
+jobContainerTag: 20200313-01
+# API key to read Google Spreadsheet
+spreadsheetApiKey: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLM
+# Google Spreadsheet ID
+spreadsheetId: 1234_ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklm
+# Webhook URL to notify discord channel
+discordWebhookUrl: https://discordapp.com/api/webhooks/012345678910111213/abcdefghijklmnopqrstuvwxyg-_ABCDEFGHIJKLMNOPQRSTUVWXYG_-012345678910
