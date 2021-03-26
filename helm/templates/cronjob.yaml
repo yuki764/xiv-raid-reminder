@@ -4,7 +4,7 @@ kind: CronJob
 metadata:
   name: xiv-raid-reminder
 spec:
-  schedule: "30 3 * * *"
+  schedule: {{ .Values.remindTime | default "0 0 * * *" | quote }}
   concurrencyPolicy: Forbid
   jobTemplate:
     spec:
@@ -15,15 +15,16 @@ spec:
             image: gcr.io/neigepluie/xiv-raid-reminder:{{ .Values.jobContainerTag | default "latest" }}
             resources:
               requests:
-                memory: "256Mi"
-                cpu: "500m"
+                memory: "128Mi"
+                cpu: "200m"
               limits:
-                memory: "256Mi"
-                cpu: "500m"
+                memory: "128Mi"
+                cpu: "200m"
             volumeMounts:
             - name: config
               mountPath: /config.json
               readOnly: true
+              subPath: config.json
           volumes:
           - name: config
             secret:

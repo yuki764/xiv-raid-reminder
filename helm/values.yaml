@@ -1,5 +1,7 @@
 # reminder container tag
 jobContainerTag: 20200313-01
+# time to remind
+remindTime: "0 0 * * *"
 # API key to read Google Spreadsheet
 spreadsheetApiKey: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLM
 # Google Spreadsheet ID
