@@ -2,7 +2,7 @@
 apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
-  name: xiv-raid-reminder
+  name: xiv-raid-reminder-{{ .Release.Name }}
 spec:
   schedule: {{ .Values.remindTime | default "0 0 * * *" | quote }}
   concurrencyPolicy: Forbid
@@ -28,5 +28,5 @@ spec:
           volumes:
           - name: config
             secret:
-              secretName: xiv-raid-reminder-config
+              secretName: xiv-raid-reminder-config-{{ .Release.Name }}
           restartPolicy: OnFailure

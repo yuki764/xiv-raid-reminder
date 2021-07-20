@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: xiv-raid-reminder-config
+  name: xiv-raid-reminder-config-{{ .Release.Name }}
 stringData:
   config.json: |
     {
