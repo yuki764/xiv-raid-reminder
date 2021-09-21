@@ -34,7 +34,7 @@ with open('config.json', 'r') as config_file:
                 if row[1] == today_str and row[3] == '有り':
 
                     payload = {
-                            'content': '今日（' + today_str + '）は' + row[0] + '日クポ。'
+                            'content': '今日（' + today_str + '）は' + row[0] + '日クポ。\n特記事項: ' + row[12]
                     }
                     response = requests.post(discord_webhook_url, data=payload)
 
