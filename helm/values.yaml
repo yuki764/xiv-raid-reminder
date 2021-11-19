@@ -1,5 +1,12 @@
 # reminder container tag
-jobContainerTag: 20210922-01
+jobContainer:
+  tag: 20210922-01
+  requests:
+    cpu: 200m
+    memory: 128Mi
+  limits:
+    cpu: 200m
+    memory: 128Mi
 # time to remind
 remindTime: "0 0 * * *"
 # API key to read Google Spreadsheet

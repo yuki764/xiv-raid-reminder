@@ -12,14 +12,14 @@ spec:
         spec:
           containers:
           - name: xiv-raid-reminder
-            image: gcr.io/neigepluie/xiv-raid-reminder:{{ .Values.jobContainerTag | default "latest" }}
+            image: gcr.io/neigepluie/xiv-raid-reminder:{{ .Values.jobContainer.tag | default "latest" }}
             resources:
               requests:
-                memory: "128Mi"
-                cpu: "200m"
+                cpu: {{ .Values.jobContainer.requests.cpu | default "200m" }}
+                memory: {{ .Values.jobContainer.requests.memory | default "128Mi" }}
               limits:
-                memory: "128Mi"
-                cpu: "200m"
+                cpu: {{ .Values.jobContainer.limits.cpu | default "200m" }}
+                memory: {{ .Values.jobContainer.limits.memory | default "128Mi" }}
             volumeMounts:
             - name: config
               mountPath: /config.json
