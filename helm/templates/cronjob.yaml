@@ -12,7 +12,7 @@ spec:
         spec:
           containers:
           - name: xiv-raid-reminder
-            image: gcr.io/neigepluie/xiv-raid-reminder:{{ .Values.jobContainer.tag | default "latest" }}
+            image: asia.gcr.io/neigepluie/xiv-raid-reminder:{{ .Values.jobContainer.tag | default "latest" }}
             resources:
               requests:
                 cpu: {{ .Values.jobContainer.requests.cpu | default "200m" }}

@@ -5,7 +5,8 @@ metadata:
 stringData:
   config.json: |
     {
-      "spreadsheet_api_key": {{ .Values.spreadsheetApiKey | default "" | quote }},
-      "spreadsheet_id":      {{ .Values.spreadsheetId     | default "" | quote }},
-      "discord_webhook_url": {{ .Values.discordWebhookUrl | default "" | quote }}
+      "spreadsheet_api_key": {{ .Values.spreadsheetApiKey  | default "" | quote }},
+      "spreadsheet_id":      {{ .Values.spreadsheetId      | default "" | quote }},
+      "discord_webhook_url": {{ .Values.discordWebhookUrl  | default "" | quote }},
+      "reminding_character": {{ .Values.remindingCharacter | default "moogle" | quote }}
     }

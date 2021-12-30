@@ -1,6 +1,6 @@
 # reminder container tag
 jobContainer:
-  tag: 20210922-01
+  tag: 0.3.0
   requests:
     cpu: 200m
     memory: 128Mi
@@ -15,3 +15,5 @@ spreadsheetApiKey: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLM
 spreadsheetId: 1234_ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklm
 # Webhook URL to notify discord channel
 discordWebhookUrl: https://discordapp.com/api/webhooks/012345678910111213/abcdefghijklmnopqrstuvwxyg-_ABCDEFGHIJKLMNOPQRSTUVWXYG_-012345678910
+# Reminding Characters (moogle / no characteristics)
+remindingCharacter: moogle
