@@ -1,5 +1,6 @@
 {
 	"spreadsheet_api_key": "",
 	"spreadsheet_id":      "",
-	"discord_webhook_url": ""
+	"discord_webhook_url": "",
+	"reminding_character": "moogle"
 }
