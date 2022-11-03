@@ -1,6 +1,7 @@
 # reminder container tag
 jobContainer:
-  tag: 0.3.0
+  name: gcr.io/neigepluie/xiv-raid-reminder
+  tag: "" # Overrides the image tag whose default is the chart appVersion.
   requests:
     cpu: 200m
     memory: 128Mi
