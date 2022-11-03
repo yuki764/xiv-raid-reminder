@@ -12,7 +12,7 @@ spec:
         spec:
           containers:
           - name: xiv-raid-reminder
-            image: "{{ .Values.image.name }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+            image: "{{ .Values.jobContainer.image.name }}:{{ .Values.jobContainer.image.tag | default .Chart.AppVersion }}"
             resources:
               requests:
                 cpu: {{ .Values.jobContainer.requests.cpu | default "200m" }}
